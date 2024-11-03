@@ -53,21 +53,26 @@ a {
 
 h1 {
   font-size: 3rem;
+  font-weight: 900;
 }
 h2 {
   font-size: 2.5rem;
+  font-weight: 700;
 }
 h3 {
   font-size: 2rem;
+  font-weight: 400;
 }
 h4,
 h5,
 h6 {
   font-size: 1.8rem;
+  font-weight: 400;
 }
 p,
 a {
   font-size: 1rem;
+  font-weight: 300;
 }
 @media screen and (max-width: 768px) {
   h1 {
@@ -86,7 +91,7 @@ a {
   }
   p,
   a {
-    font-size: 0.6rem;
+    font-size: 1rem;
   }
 }
 
@@ -157,6 +162,9 @@ a {
 .header-list ul li {
   margin-right: 25px;
 }
+.header-menu img {
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .header-list ul {
     display: none;
@@ -164,11 +172,20 @@ a {
   .header-list button {
     display: none;
   }
+  .header-menu img {
+    width: 100%;
+    padding: 15px;
+    display: block;
+    cursor: pointer;
+  }
 }
 
 /* Hero */
 #hero {
-  background-color: red;
+  background-image: url(../img/banner.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #hero .container {
   height: 80vh;
@@ -176,11 +193,111 @@ a {
   align-items: center;
   justify-content: center;
 }
+.hero-box {
+  color: #fff;
+  background-image: linear-gradient(
+    51deg,
+    rgba(23, 26, 60, 0.7) 5%,
+    rgba(23, 26, 60, 0.3) 95%
+  );
+  border-radius: 20px;
+  padding: 25px;
+  width: 700px;
+}
+.hero-box p {
+  margin-bottom: 20px;
+}
+
+.hero-box-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero-box-1 button {
+  border: none;
+  margin: 10px;
+  width: 100%;
+  padding: 16px;
+  cursor: pointer;
+  border-radius: 16px;
+  font-weight: 300;
+  background-color: #fff;
+  font-family: Vazirmatn;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-box-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero-box-2 button {
+  color: #fff;
+  border: none;
+  margin: 10px;
+  width: 100%;
+  padding: 16px;
+  cursor: pointer;
+  font-weight: 300;
+  border-radius: 16px;
+  font-family: Vazirmatn;
+  border: 1px solid #fff;
+  background-color: #00000000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-box-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-box-3 button {
+  color: #fff;
+  border: none;
+  margin: 10px;
+  width: 50%;
+  padding: 16px;
+  cursor: pointer;
+  font-weight: 300;
+  border-radius: 16px;
+  font-family: Vazirmatn;
+  border: 1px solid #fff;
+  background-color: #00000000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .hero-img {
   margin-top: 350px;
   display: flex;
   justify-content: end;
 }
 .hero-img img {
-  width: 50%;
+  width: 70%;
+}
+@media screen and (max-width: 768px) {
+  .hero-box {
+    width: 300px;
+  }
+  .hero-img img {
+    display: none;
+  }
+  .hero-box-1,
+  .hero-box-2,
+  .hero-box-3 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-box-3 button {
+    width: 100%;
+  }
 }
